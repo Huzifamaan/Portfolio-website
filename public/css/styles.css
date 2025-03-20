@@ -1,0 +1,544 @@
+/* ================================= */
+/* ========== General Styles ========== */
+/* ================================= */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #1b1b1b;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ================================= */
+/* ========== Navigation Bar ========== */
+/* ================================= */
+
+nav {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 15px 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #2575fc;
+}
+
+/* ========== Hamburger Menu (Mobile Navigation) ========== */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 7px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #222;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* ================================= */
+/* ========== Hero Section (Home Page) ========== */
+/* ================================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+/* Left Side Content */
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.hero-content h1 span {
+    color: #ffcc00;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+/* Right Side Image */
+.hero-image {
+    max-width: 40%;
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn-transparent {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.btn-transparent:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ========== About Page ========== */
+.about {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+    font-size: 2.5em;
+    color: #2575fc;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    background: #2575fc;
+    color: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .about {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* ========== Projects Page ========== */
+
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Resume Page ========== */
+.resume {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.resume h2 {
+    font-size: 2.5em;
+    color: #2575fc;
+    margin-bottom: 20px;
+}
+
+.resume ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume ul li {
+    background: #2575fc;
+    color: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+/* Resume Download Button */
+.resume .btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #2575fc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.resume .btn:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .resume {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* ========== Blog Page ========== */
+.blog {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blog h2 {
+    font-size: 2.5em;
+    color: #2575fc;
+    margin-bottom: 20px;
+}
+
+.blog article {
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    transition: background 0.3s ease;
+}
+
+.blog article:hover {
+    background: #f5f5f5;
+}
+
+.blog article h3 {
+    font-size: 1.5em;
+    color: #2575fc;
+}
+
+.blog article a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog article a:hover {
+    color: #6a11cb;
+    text-decoration: underline;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .blog {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+
+
+/* ================================= */
+/* ========== Contact Section ========== */
+/* ================================= */
+
+.contact {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    color: #2575fc;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contact-form button {
+    background: #2575fc;
+    color: white;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+#contact-form button:hover {
+    background: #6a11cb;
+}
+
+/* ================================= */
+/* ========== Footer ========== */
+/* ================================= */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* ================================= */
+/* ========== Floating Chatbot Icon ========== */
+/* ================================= */
+
+/* ========== Floating Chatbot Icon ========== */
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 45px;  /* Reduced width */
+    height: 45px; /* Reduced height */
+    background: #2575fc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#chat-icon img {
+    width: 22px;  /* Adjusted icon size */
+    height: 22px;
+}
+
+/* Hover Effect */
+#chat-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Chatbot Window */
+#chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    width: 320px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+}
+
+/* Show Chatbot */
+.show-chatbot {
+    display: flex !important;
+}
+
+/* ========== Chatbot Styling ========== */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background: #2575fc;
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.chatbox {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+#chat-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+#send-chat {
+    background: #2575fc;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ✅ Default Hidden Navigation for Mobile */
+@media (max-width: 850px) {
+    .hamburger {
+        display: block;
+        font-size: 2em;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #222;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

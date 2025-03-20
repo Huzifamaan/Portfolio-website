@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Syed Huzaifa Hussain</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Syed Huzaifa Hussain</div>
+        <button class="hamburger">☰</button>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Projects Section -->
+    <section>
+        <h2>My Projects</h2>
+        <div class="project-gallery">
+            <div class="project">
+                <h3>AI Chatbot</h3>
+                <p>Built an AI chatbot using OpenAI's API.</p>
+            </div>
+            <div class="project">
+                <h3>E-commerce Website</h3>
+                <p>Developed an online store with Node.js and MongoDB.</p>
+            </div>
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>My personal portfolio showcasing my work and skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Chatbot Icon -->
+    <div id="chat-icon">
+        <img src="/images/chat-icon.png" alt="Chat">
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-container">
+        <div class="chatbot-header">
+            <span>AI Chatbot</span>
+            <button id="close-chatbot">✖</button>
+        </div>
+        <div class="chatbox" id="chatbox"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Ask me anything...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+
+    <script src="js/projects.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
